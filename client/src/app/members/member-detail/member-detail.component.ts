@@ -45,7 +45,7 @@ export class MemberDetailComponent implements OnInit {
   }
 
   loadMember() {
-    var username = this.route.snapshot.paramMap.get('username');
+    const username = this.route.snapshot.paramMap.get('username');
     if (!username) return;
     this.memberService.getMember(username).subscribe({
       next: member => {
@@ -54,5 +54,4 @@ export class MemberDetailComponent implements OnInit {
       }
     })
   }
-
 }
